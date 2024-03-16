@@ -1,0 +1,27 @@
+.text {
+    position: relative;
+    
+}
+
+.text::after {
+    content: '';
+    position: absolute;
+    top: 2;
+    left: 2;
+    color: #7c7c7c;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    cursor: text; /* Placeholder text color */
+}
+
+.text:empty::after {
+    content: "Enter a text...";
+}
+
+.text:focus::after {
+    opacity: 100; /* Show the placeholder when in focus */
+}
+
+.text:empty:focus::after {
+    opacity: 100; /* Show the placeholder when in focus and empty */
+}
