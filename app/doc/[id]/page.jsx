@@ -38,7 +38,6 @@ const Page = ({ params }) => {
         <>
           
             <div className='h-screen overflow-y-auto overflow-x-hidden'>
-                <Button onClick={() => createNewPage(params.id)}>NewPage</Button>
                 
                 <Header docId={params.id} />
 
